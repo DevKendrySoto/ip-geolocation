@@ -13,12 +13,11 @@ document.addEventListener('DOMContentLoaded', function() {
   };
 
   form.addEventListener("submit", async (e) => {    e.preventDefault();
-    const location = input.value.trim(); // Asegúrate de quitar espacios en blanco
+    const location = input.value.trim();
     if (!location) return;
     button.setAttribute("disabled", "disabled");
 
     try {
-      // Asegúrate de usar la dirección IP ingresada en la URL de la solicitud
       const url = `https://ip-geo-location.p.rapidapi.com/ip/${location}?format=json`;
       const response = await fetch(url, OPTIONS);
       if (!response.ok) {
