@@ -12,6 +12,20 @@ document.addEventListener('DOMContentLoaded', function() {
     },
   };
 
+document.getElementById('toggle-dark-mode').addEventListener('click', function() {
+  const currentTheme = document.documentElement.getAttribute('data-theme');
+  let targetTheme = "dark";
+
+  if (currentTheme === "dark") {
+      targetTheme = "light";
+  }
+
+  document.documentElement.setAttribute('data-theme', targetTheme);
+
+  this.textContent = `Modo ${targetTheme === "dark" ? "light" : "dark"}`;
+});
+
+
   form.addEventListener("submit", async (e) => {    e.preventDefault();
     const location = input.value.trim();
     if (!location) return;
