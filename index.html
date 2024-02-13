@@ -2,10 +2,12 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <title>My First Web Page</title>
+  <title>IP Locations</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <h1>Esta es mi primera Web</h1>
+  <button id="dark-mode">Dark mode</button>
+  <h1 class="title">Obtain IP information</h1>
   <main>
     <form id="form">
       <label>
@@ -14,9 +16,11 @@
       </label>
       <button type="submit" id="submit">Look for IP</button>
     </form>
-    <div>
-      <p>Result:</p>
+    <div class="container-result">
+      <div class="content">
+        <p>Result:</p>
       <pre id="result"></pre>
+      </div>
     </div>
   </main>
   <script src="main.js"></script>
