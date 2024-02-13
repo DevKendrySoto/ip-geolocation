@@ -22,9 +22,8 @@ document.getElementById('toggle-dark-mode').addEventListener('click', function()
 
   document.documentElement.setAttribute('data-theme', targetTheme);
 
-  this.textContent = `Modo ${targetTheme === "dark" ? "light" : "dark"}`;
+  this.textContent = `Mode ${targetTheme === "dark" ? "light" : "dark"}`;
 });
-
 
   form.addEventListener("submit", async (e) => {    e.preventDefault();
     const location = input.value.trim();
